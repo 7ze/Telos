@@ -1,5 +1,4 @@
 
-## Building
+## Personal website featuring projects and writings
 
-Work in progress
-
+![banner image](./public/open-graph.png)
