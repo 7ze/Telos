@@ -1,0 +1,52 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import TwinklingStars from "@components/TwinklingStars.astro";
+import MeteorShower from "@components/MeteorShower.astro";
+---
+
+<PageLayout title="404" description="404 Not Found!">
+  <!-- Light Mode: Particles -->
+  <div class="absolute inset-0 block dark:hidden">
+    <div id="particles1" class="fixed inset-0"></div>
+    <div id="particles2" class="fixed inset-0"></div>
+    <div id="particles3" class="fixed inset-0"></div>
+  </div>
+
+  <!-- Dark Theme: Stars -->
+  <div class="absolute inset-0 bg-black hidden dark:block">
+    <div id="stars1" class="fixed inset-0"></div>
+    <div id="stars2" class="fixed inset-0"></div>
+    <div id="stars3" class="fixed inset-0"></div>
+  </div>
+
+  <!-- Dark Theme: Twinkling Stars / Metors -->
+  <div id="galaxy" class="fixed inset-0">
+    <div class="hidden dark:block">
+      <TwinklingStars />
+      <MeteorShower />
+    </div>
+  </div>
+
+  <script is:inline src="/js/bg.js"></script>
+
+  <section class="relative animate text-center">
+    <TopLayout>
+      <div class="grid place-content-center min-h-[50vh] gap-4">
+        <h1
+          class="text-3xl font-semibold text-black/90 dark:text-white/90 mt-2"
+        >
+          404
+        </h1>
+        <div
+          class="text-black/70 dark:text-white/70 font-medium backdrop-blur-sm"
+        >
+          <p>Oops! Got Lost?</p>
+          <p>
+            Please go back to the <a class="underline" href="/">homepage</a>.
+          </p>
+        </div>
+      </div>
+    </TopLayout>
+  </section>
+</PageLayout>

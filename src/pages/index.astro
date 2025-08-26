@@ -69,7 +69,7 @@ const stack = [
   
   <!-- HERO -->
   <section class="relative h-screen w-full">
-    <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
+    <div id="planetcont" class='animate absolute inset-0 top-1/3 overflow-hidden'>
       <div id="crescent" class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
         <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
           <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
@@ -101,23 +101,21 @@ const stack = [
     </div>
   </section>
 
-  <div class="relative bg-white dark:bg-black">
+  <div class="relative">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
 
       <!-- About Section -->
-      <section class="animate">
-        <article class="text-lg text-justify">
+      <section class="animate mt-4">
+        <article class="text-lg text-justify text-black/70 dark:text-white/70">
           <p> 
             I’m Shinu Donney —  primarily a student of computer science. I build
             things I love, including data systems and automation tools with a focus
-            on clarity, structure, and simplicity. My approach is shaped by functional
-            programming, mathematical reasoning, and logic.
+            on clarity and simplicity. 
             </p>
           <p>
             Beyond formal studies, I study philosophy and theology, among other
             things. Currently based in Germany, I’m open to roles in data or systems
-            engineering, where thoughtfulness, elegance, and principle are part
-            of the craft.
+            engineering.
           </p>
         </article>
       </section>
@@ -169,6 +167,34 @@ const stack = [
       <!--   </div> -->
       <!-- </section> -->
 
+
+      <!-- Contact Section -->
+      <section class="animate">
+        <div class="text-black/70 dark:text-white/70">
+          <p class="font-semibold text-black dark:text-white">
+            Let's Connect
+          </p>
+          <p>
+            Reach out to me via email or on social media.
+          </p>
+          <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
+            {SOCIALS.map(social => (
+              <div class="col-span-1 flex items-center gap-1">
+                <span class="whitespace-nowrap truncate">
+                  {social.NAME}
+                </span>
+              </div>
+              <div class="col-span-3 truncate">
+                <a href={social.HREF} target="_blank" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+                  <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+                    {social.TEXT}
+                  </span>
+                </a>
+              </div>
+            ))}
+        </div>
+      </section>
+
       <!-- Tech Stack Section -->
       <section class="animate">
         <div class="space-y-4">
@@ -192,33 +218,6 @@ const stack = [
               </span>
             </a>
           </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="animate">
-        <div>
-          <p class="font-semibold text-black dark:text-white">
-            Let's Connect
-          </p>
-          <p>
-            Reach out to me via email or on social media.
-          </p>
-          <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
-            {SOCIALS.map(social => (
-              <div class="col-span-1 flex items-center gap-1">
-                <span class="whitespace-nowrap truncate">
-                  {social.NAME}
-                </span>
-              </div>
-              <div class="col-span-3 truncate">
-                <a href={social.HREF} target="_blank" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-                  <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                    {social.TEXT}
-                  </span>
-                </a>
-              </div>
-            ))}
         </div>
       </section>
 
