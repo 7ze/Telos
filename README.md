@@ -1,4 +1,6 @@
 
-## Personal website featuring projects and writings
+## Telos
 
-![banner image](./public/open-graph.png)
+Personal website featuring projects and writings
+
+![banner image](./public/open-graph.jpg)
